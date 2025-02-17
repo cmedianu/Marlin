@@ -21,13 +21,6 @@
  */
 #pragma once
 
-// GD32F303
-// RET6
-// AUHF906AC2149
-// GigaDevice
-// ARM
-
-// TMC2208 Driver
 #define CONFIG_EXAMPLES_DIR "Creality/Ender-3 Neo"
 
 /**
@@ -167,6 +160,8 @@
 #define X_DRIVER_TYPE TMC2208_STANDALONE
 #define Y_DRIVER_TYPE TMC2208_STANDALONE
 #define Z_DRIVER_TYPE TMC2208_STANDALONE
+#define NO_CREALITY_422_DRIVER_WARNING
+
 //#define X2_DRIVER_TYPE A4988
 //#define Y2_DRIVER_TYPE A4988
 //#define Z2_DRIVER_TYPE A4988
@@ -1399,7 +1394,7 @@
  *
  * See https://github.com/synthetos/TinyG/wiki/Jerk-Controlled-Motion-Explained
  */
-//#define S_CURVE_ACCELERATION
+#define S_CURVE_ACCELERATION
 
 //===========================================================================
 //============================= Z Probe Options =============================
@@ -1895,8 +1890,8 @@
 // @section geometry
 
 // The size of the printable area
-#define X_BED_SIZE 235
-#define Y_BED_SIZE 235
+#define X_BED_SIZE 220
+#define Y_BED_SIZE 220
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
 #define X_MIN_POS -20
